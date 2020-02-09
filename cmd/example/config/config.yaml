@@ -1,0 +1,23 @@
+api:
+  address: 127.0.0.1:8080
+  write_timeout: 10     # in seconds
+  read_timeout: 5       # in seconds
+  graceful_timeout: 10  # in seconds
+
+db:
+  provider: postgres
+  host: localhost
+  port: 5432
+  db_name: petstore_db
+  user: petstore
+  password: test
+  ssl: disable
+  retry: 60               # count, int
+  timeout: 20             # in seconds
+  random_data_count: 1000 # number random data for users, pets, orders. Can be 0.
+
+logger:
+  encoding: console      # can be json or console
+  output_paths:
+    - stdout
+    - log.txt
